@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS</title>
+
+	<style type="text/css">
+		#maindiv {
+			position: absolute;
+			width:  100%;
+			height:  100%;
+			background-color: skyblue;
+		}
+
+        @keyframes circle {
+        	0% {background-color: yellow;}
+        	50% {background-color: yellow;}
+        	0% {background-color: yellow;}
+        }
+
+		#div1{
+			position: absolute;
+			height: 50px;
+			width:50px;
+			border-radius: 50%;
+			left: 50px;
+			top: 50px;
+			z-index: 1000;
+
+            animation-name: circle;
+			animation-duration: .5s;
+			animation-iteration-count: infinite;
+		}
+
+		
+	</style>
+
+</head>
+	<body>
+		<div id="maindiv" onmousemove="change(event)">
+	<p align="center">
+		<br>
+		<input type="text" name="t1" id="t1">
+		<input type="text" name="t2" id="t2">
+	</p>
+</div>
+<div id="div1">
+	
+</div>
+
+     <script type="text/javascript">	
+	
+	function change(e){
+		document.getElementById("t1").value = x;
+		document.getElementById("t2").value = y;
+
+		var x = e.clientX-50 + "px";
+		var y = e.clientY-50 + "px";
+
+		t1.value = x
+		t2.value = y
+
+		document.getElementById("div1").style.left = x;
+		document.getElementById("div1").style.top = y;
+	}
+
+		</script>
+	</body>
+</head>
